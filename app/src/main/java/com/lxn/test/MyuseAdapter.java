@@ -73,7 +73,7 @@ public class MyuseAdapter extends SimpleAdapter {
                                 @Override
                                 public void done(String objectId, BmobException e) {
                                     if (e == null) {
-                                        Toast.makeText(context, "收藏成功" + objectId, Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(context, "收藏成功" , Toast.LENGTH_SHORT).show();
                                     } else {
                                         Log.i("worong", "wrong:" + e.getMessage());
                                         Toast.makeText(context, "收藏失败" + e.getMessage(), Toast.LENGTH_SHORT).show();

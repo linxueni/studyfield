@@ -16,7 +16,7 @@ public class App_data extends BmobObject {
         return tag2;
     }
     public void setTag2(String tag) {
-        this.tag2 = tag;
+         this.tag2 = tag;
     }
     public String getContent() {
         return content;

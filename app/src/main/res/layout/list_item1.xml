@@ -1,0 +1,74 @@
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    android:descendantFocusability="afterDescendants"-->
+
+    <ImageView
+        app:layout_heightPercent="13%"
+        app:layout_widthPercent="20%"
+        android:id="@+id/image"
+        android:adjustViewBounds="true"
+        app:layout_marginTopPercent="2%"
+        app:srcCompat="@mipmap/shujujiegou2"
+        />
+    <TextView
+        android:id="@+id/itemTag1"
+        app:layout_heightPercent="6%"
+        app:layout_widthPercent="20%"
+        android:textSize="12sp"
+        app:layout_marginLeftPercent="80%"
+        app:layout_marginTopPercent="2.5%"
+ />
+
+    <TextView
+        android:id="@+id/itemTag2"
+        app:layout_heightPercent="6%"
+        app:layout_widthPercent="20%"
+        android:textSize="12sp"
+        app:layout_marginLeftPercent="65%"
+        app:layout_marginTopPercent="2.5%"/>
+
+    <TextView
+        android:id="@+id/itemContent"
+        android:textColor="#131313"
+        android:textSize="18sp"
+        app:layout_heightPercent="16%"
+        app:layout_marginLeftPercent="20%"
+        app:layout_marginTopPercent="2%"
+        app:layout_widthPercent="40%"
+   />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:focusable="false"
+        android:onClick="onApp"
+
+        android:text="收藏"
+        android:textSize="12sp"
+        app:layout_heightPercent="6%"
+        app:layout_marginBottomPercent="1%"
+        app:layout_marginLeftPercent="62%"
+        app:layout_marginTopPercent="11%"
+        app:layout_widthPercent="15%" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="找相似"
+        android:textSize="12sp"
+        app:layout_heightPercent="6%"
+        app:layout_marginBottomPercent="1%"
+        app:layout_marginLeftPercent="80%"
+        app:layout_marginTopPercent="11%"
+        app:layout_widthPercent="15%"
+        android:focusable="false"/>
+</androidx.percentlayout.widget.PercentRelativeLayout>

@@ -49,7 +49,7 @@
         android:focusable="false"
         android:onClick="onApp"
 
-        android:text="收藏"
+        android:text="@string/collect"
         android:textSize="12sp"
         app:layout_heightPercent="6%"
         app:layout_marginBottomPercent="1%"
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="找相似"
+        android:text="@string/similar"
         android:textSize="12sp"
         app:layout_heightPercent="6%"
         app:layout_marginBottomPercent="1%"

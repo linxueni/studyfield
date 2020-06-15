@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:text="收藏"
+        android:text="@string/collect"
         android:textSize="12sp"
         app:layout_heightPercent="6%"
         app:layout_marginBottomPercent="1%"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:focusable="false"
-        android:text="购买"
+        android:text="@string/buy"
         android:textColor="#BF1616"
         android:textSize="12sp"
         android:clickable="true"
@@ -71,5 +71,4 @@
         app:layout_marginLeftPercent="80%"
         app:layout_marginTopPercent="11%"
      />
-
     </androidx.percentlayout.widget.PercentRelativeLayout>

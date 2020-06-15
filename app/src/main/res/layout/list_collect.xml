@@ -48,7 +48,7 @@
         android:clickable="true"
         android:focusable="false"
         android:onClick="onApp"
-        android:text="删除"
+        android:text="@string/de"
         android:textSize="12sp"
         app:layout_heightPercent="6%"
         app:layout_marginBottomPercent="1%"

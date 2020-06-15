@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:text="点击下载"
+        android:text="@string/downl"
         android:textColor="#03A9F4"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20sp"
-            android:text="本资料由学领域官方搜集、提供，请勿用作商业用途" />
+            android:text="@string/nobusiness" />
 
         <ImageView
             android:id="@+id/imageView2"

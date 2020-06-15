@@ -12,4 +12,26 @@
     <string name="title_activity_use1">Use1</string>
     <string name="title_activity_app1">App1</string>
     <string name="title_activity_hold">Hold</string>
+    <string name="inputdata">请输入资料信息</string>
+    <string name="tag1">TAG1:</string>
+    <string name="inputtag1">请输入第一个标签</string>
+    <string name="tag2">TAG2:</string>
+    <string name="inputtag2">请输入第二个标签</string>
+    <string name="content">Content:</string>
+    <string name="inputcontent">请输入资料简介</string>
+    <string name="price">Price:</string>
+    <string name="inputprice">请输入价格</string>
+    <string name="returnapp">返回官方资料库</string>
+    <string name="returnuser">返回用户上传资料页面</string>
+    <string name="mycollect">我的收藏</string>
+    <string name="collect">收藏</string>
+    <string name="inputkey">请输入关键字</string>
+    <string name="app">官方资料库</string>
+    <string name="user">用户上传资料</string>
+    <string name="downl">下载</string>
+    <string name="nobusiness">本资料由学领域官方搜集、提供，请勿用作商业用途</string>
+    <string name="shiming">实名认证已通过</string>
+    <string name="de">删除</string>
+    <string name="similar">找相似</string>
+    <string name="buy">购买</string>
 </resources>

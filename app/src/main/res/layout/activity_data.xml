@@ -15,14 +15,14 @@
             android:layout_width="match_parent"
             app:layout_marginLeftPercent="0%"
             android:iconifiedByDefault="false"
-            android:queryHint="请输入关键字"
+            android:queryHint="@string/inputkey"
             />
 
         <TextView
             android:id="@+id/app"
             android:clickable="true"
             android:onClick="onApp"
-            android:text="官方资料库"
+            android:text="@string/app"
             android:textColor="#2196F3"
             android:textSize="15sp"
             app:layout_heightPercent="10%"
@@ -33,7 +33,7 @@
         <TextView
             android:id="@+id/user"
             android:clickable="true"
-            android:text="用户上传资料"
+            android:text="@string/user"
             android:textColor="#202122"
             android:textSize="15sp"
             app:layout_heightPercent="10%"

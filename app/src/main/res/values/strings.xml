@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">test</string>
-    <string name="title_activity_data">data</string>
+    <string name="app_name">学领域</string>
+    <string name="title_activity_data">学领域</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -34,5 +34,5 @@
     <string name="de">删除</string>
     <string name="similar">找相似</string>
     <string name="buy">购买</string>
-    <string name="stydyfield">学领域</string>
+    <string name="studyfield">学领域</string>
 </resources>

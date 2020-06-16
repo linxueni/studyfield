@@ -19,6 +19,7 @@ import android.widget.SearchView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
 
 import org.w3c.dom.Text;
@@ -48,7 +49,7 @@ public class Data extends AppCompatActivity implements View.OnClickListener,Runn
     public String[] tag1;
     public String[] tag2;
     public String[] content;
-    public String[] picture;
+    public Object[] picture;
     int count;
     private ArrayList<HashMap<String,String>> listItems; // 存放文字、图片信息
     private SimpleAdapter listItemAdapter; // 适配器
@@ -76,12 +77,13 @@ public class Data extends AppCompatActivity implements View.OnClickListener,Runn
                     tag1=new String[count];
                     tag2=new String[count];
                     content=new String[count];
-                    picture=new String[count];
+                    picture=new Object[count];
                     for(int i=0;i<count;i++) {
                         Log.i(TAG,object.get(i).getObjectId() );
                         tag1[i]=object.get(i).getTag1();
                         tag2[i]=object.get(i).getTag2();
                         content[i]=object.get(i).getContent();
+//                        picture[i]=object.get(i).getPicture();
                         Log.i(TAG,content[i]);//详细描述
                     }
                init();
@@ -174,6 +176,7 @@ public class Data extends AppCompatActivity implements View.OnClickListener,Runn
             map.put("ItemTag2",  tag2[i]);//TAG2
             map.put("ItemContent",  content[i]);
             map.put("button", "收藏");
+            map.put("picture",R.mipmap.shujujiegou2);
             Log.i(TAG,content[i]);//详细描述
             data.add(map);
         }

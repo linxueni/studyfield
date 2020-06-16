@@ -8,9 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,10 +28,11 @@ import cn.bmob.v3.listener.SaveListener;
 public class MyAdapter extends SimpleAdapter {
     //上下文
     Context context;
-String TAG="first";
-String tag1;
+ String TAG="first";
+  String tag1;
     String tag2;
     String content;
+    String picture;
     public MyAdapter(Context context,
                      List<? extends Map<String, ?>> data, int resource, String[] from,
                      int[] to) {
@@ -41,6 +45,9 @@ String tag1;
         View view = super.getView(i, convertView, viewGroup);
         final Button btn = (Button) view.findViewById(R.id.button3);
         btn.setTag(i);//设置标签
+        final Button btn1 = (Button) view.findViewById(R.id.button4);
+        final ImageView image=view.findViewById(R.id.image);
+        btn1.setTag(i);//设置标签
 
         btn.setOnClickListener(new android.view.View.OnClickListener() {
 
@@ -48,9 +55,9 @@ String tag1;
             public void onClick(View v) {
 
                 Log.i("first", "try"+String.valueOf(btn.getTag()));
-                Bmob.initialize(context, "5b5e2b1c75af83d4316468eb9ae614c4");
+
                 Collect da = new Collect();
-                App_data db = new App_data();
+               App_data  db = new App_data();
                 BmobQuery<App_data> bmobQuery = new BmobQuery<App_data>();
                 bmobQuery.findObjects(new FindListener<App_data>() {
                     @Override
@@ -62,6 +69,7 @@ String tag1;
                             Log.i(TAG,"TAG!:"+tag1);
                             tag2=object.get(a-1-(Integer) btn.getTag()).getTag2();
                             content=object.get(a-1-(Integer) btn.getTag()).getContent();
+                            Log.i(TAG,object.get(a-1-(Integer) btn.getTag()).getPicture().getUrl());
                             da.setTag1(tag1);
                             da.setTag2(tag2);
                             da.setContent(content);
@@ -87,6 +95,7 @@ String tag1;
 
             }
         });
+
         return view;
     }
 }

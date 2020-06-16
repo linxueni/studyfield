@@ -35,4 +35,6 @@
     <string name="similar">找相似</string>
     <string name="buy">购买</string>
     <string name="studyfield">学领域</string>
+    <string name="put">上传</string>
+    <string name="putpicture">上传图片</string>
 </resources>

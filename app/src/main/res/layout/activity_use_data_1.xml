@@ -109,14 +109,33 @@ android:hint="@string/inputtag1"/>
             android:hint="@string/inputprice" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFF                                "
-        android:onClick="onClick"
-        android:layout_marginTop="10dp"
-        android:textSize="18sp"
-        android:text="上传"
-        android:textColor="#2196F3" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFFF                                "
+            android:onClick="onClick"
+            android:text="@string/putpicture"
+            android:textColor="#2196F3"
+            android:textSize="18sp"
+            android:layout_marginLeft="100dp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFFF                                "
+            android:onClick="onClick"
+            android:text="@string/put"
+            android:textColor="#2196F3"
+            android:textSize="18sp"
+            android:layout_marginLeft="30dp"/>
+    </LinearLayout>
 </LinearLayout>

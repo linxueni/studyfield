@@ -10,7 +10,7 @@
         android:id="@+id/image"
         android:adjustViewBounds="true"
         app:layout_marginTopPercent="2%"
-        app:srcCompat="@mipmap/shujujiegou2"
+        android:src="@mipmap/shujujiegou2"
         />
     <TextView
         android:id="@+id/itemTag1"

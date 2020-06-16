@@ -26,7 +26,6 @@ public class Collect extends BmobObject {
     public void setContent(String content) {
         this.content = content;
     }
-
     public void setPicture(BmobFile picture) {
         this.picture = picture;
     }

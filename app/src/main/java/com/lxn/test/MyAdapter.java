@@ -13,6 +13,8 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ import java.util.Map;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.datatype.BmobFile;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 import cn.bmob.v3.listener.SaveListener;
@@ -32,7 +35,7 @@ public class MyAdapter extends SimpleAdapter {
   String tag1;
     String tag2;
     String content;
-    String picture;
+    BmobFile picture;
     public MyAdapter(Context context,
                      List<? extends Map<String, ?>> data, int resource, String[] from,
                      int[] to) {
@@ -43,19 +46,16 @@ public class MyAdapter extends SimpleAdapter {
     @Override
     public View getView(final int i, View convertView, ViewGroup viewGroup) {
         View view = super.getView(i, convertView, viewGroup);
+        RecyclerView.ViewHolder viewHolder = null;
         final Button btn = (Button) view.findViewById(R.id.button3);
         btn.setTag(i);//设置标签
         final Button btn1 = (Button) view.findViewById(R.id.button4);
         final ImageView image=view.findViewById(R.id.image);
         btn1.setTag(i);//设置标签
-
         btn.setOnClickListener(new android.view.View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
                 Log.i("first", "try"+String.valueOf(btn.getTag()));
-
                 Collect da = new Collect();
                App_data  db = new App_data();
                 BmobQuery<App_data> bmobQuery = new BmobQuery<App_data>();
@@ -70,9 +70,11 @@ public class MyAdapter extends SimpleAdapter {
                             tag2=object.get(a-1-(Integer) btn.getTag()).getTag2();
                             content=object.get(a-1-(Integer) btn.getTag()).getContent();
                             Log.i(TAG,object.get(a-1-(Integer) btn.getTag()).getPicture().getUrl());
+                            picture=object.get(a-1-(Integer) btn.getTag()).getPicture();
                             da.setTag1(tag1);
                             da.setTag2(tag2);
                             da.setContent(content);
+                            da.setPicture(picture);
                             da.save(new SaveListener<String>() {
                             @Override
                             public void done(String objectId, BmobException e) {

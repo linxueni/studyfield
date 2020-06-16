@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,33 +17,37 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class MyuseAdapter extends RecyclerView.Adapter<MyuseAdapter.MyViewHolder> {
-    String TAG = "first";
+public class MyappAdapter extends RecyclerView.Adapter<MyappAdapter.MyViewHolder>{
+    String TAG="first";
     private Context mContext;
-    private List<User_data> mList;
+    private List<App_data> mList;
     //定义监听接口
     private OnItemClickListener mOnItemClickListener;
 
-    public MyuseAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(mContext).inflate(R.layout.list_item,parent,false);
-        MyuseAdapter.MyViewHolder myViewHolder = new MyuseAdapter.MyViewHolder(itemView);
+
+    @NonNull
+    @Override
+    public MyappAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.list_item1,parent,false);
+        MyappAdapter.MyViewHolder myViewHolder = new MyappAdapter.MyViewHolder(itemView);
         return myViewHolder;
     }
+
     // 第一个参数是上下文环境，第二个参数是每一项的子布局
-    public MyuseAdapter(List<User_data> mList, Context context) {
+    public MyappAdapter(List<App_data> mList, Context context) {
         this.mContext = context;
         this.mList = mList;
     }
-
-    public void onBindViewHolder(@NonNull MyuseAdapter.MyViewHolder holder, int position) {
+    @Override
+    public void onBindViewHolder(@NonNull MyappAdapter.MyViewHolder holder, int position) {
         //获取数据
-        User_data data = mList.get(position);
+        App_data data = mList.get(position);
         Glide.with(mContext).load(data.getPicture().getUrl()).into(holder.image);
         holder.tag1.setText(data.getTag1());
-        Log.i(TAG, "onBindViewHolder: "+data.getTag1());
+//        Log.i(TAG, "onBindViewHolder: "+data.getTag1());
         holder.tag2.setText(data.getTag2());
         holder.content.setText(data.getContent());
-        holder.price.setText("购买："+data.getPrice()+"元");
+
         holder.likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +71,7 @@ public class MyuseAdapter extends RecyclerView.Adapter<MyuseAdapter.MyViewHolder
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.mOnItemClickListener = onItemClickListener;
     }
+
     @Override
     public int getItemCount() {
         return mList.size();
@@ -78,7 +84,7 @@ public class MyuseAdapter extends RecyclerView.Adapter<MyuseAdapter.MyViewHolder
         private TextView tag2;
         private TextView content;
         private Button likeBtn;
-        private Button price;
+        private TextView comState;
 
         //构造方法
         public MyViewHolder(View itemView) {
@@ -89,10 +95,12 @@ public class MyuseAdapter extends RecyclerView.Adapter<MyuseAdapter.MyViewHolder
             tag2 = itemView.findViewById(R.id.itemTag2);
             content = itemView.findViewById(R.id.itemContent);
             likeBtn = itemView.findViewById(R.id.button3);
-            price= itemView.findViewById(R.id.itemprice);
+
+
         }
 
     }
+
     /**
      * 删除按钮的监听接口
      */
@@ -103,17 +111,15 @@ public class MyuseAdapter extends RecyclerView.Adapter<MyuseAdapter.MyViewHolder
         void onLikeClick(View view,int i);
     }
 
-    private MyuseAdapter.onItemLikeListener onItemLikeListener;
+    private onItemLikeListener onItemLikeListener;
 
-    private MyuseAdapter.onItemDeleteListener mOnItemDeleteListener;
+    private onItemDeleteListener mOnItemDeleteListener;
 
-    public void setOnItemDeleteClickListener(MyuseAdapter.onItemDeleteListener mOnItemDeleteListener) {
+    public void setOnItemDeleteClickListener(onItemDeleteListener mOnItemDeleteListener) {
         this.mOnItemDeleteListener = mOnItemDeleteListener;
     }
 
-    public void setOnItemLikeListener(MyuseAdapter.onItemLikeListener onItemLikeListener) {
+    public void setOnItemLikeListener(MyappAdapter.onItemLikeListener onItemLikeListener) {
         this.onItemLikeListener = onItemLikeListener;
     }
-
-
 }

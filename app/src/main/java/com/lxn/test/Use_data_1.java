@@ -57,7 +57,7 @@ public class Use_data_1 extends AppCompatActivity implements View.OnClickListene
             Toast.makeText(Use_data_1.this, "信息不完善，不能上传", Toast.LENGTH_SHORT).show();
 
         }
-        Intent i = new Intent(this, User.class);
+        Intent i = new Intent(this, User2.class);
         startActivity(i);
 
 //    Intent i = new Intent(this, Data.class);

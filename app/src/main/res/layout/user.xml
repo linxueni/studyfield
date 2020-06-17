@@ -62,14 +62,18 @@
             app:layout_marginLeftPercent="92%"
             app:layout_marginTopPercent="7%"
             app:layout_widthPercent="9%" />
-
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/refresh"
+            app:layout_marginTopPercent="13%" >
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_marginTopPercent="13%"
-            />
 
+            />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
         <!--        <androidx.viewpager.widget.ViewPager-->
         <!--            android:id="@+id/viewpager"-->
         <!--            android:layout_width="match_parent"-->

@@ -74,7 +74,7 @@ public String id;
         recyclerView = findViewById(R.id.listview);
         btn= findViewById(R.id.button3);
         Bmob.initialize(this, "5b5e2b1c75af83d4316468eb9ae614c4");
-        String bql = "select * from App_data";
+        String bql = "select * from App_data ORDER BY updatedAt DESC";
         new BmobQuery<App_data>().doSQLQuery(
                 bql, new SQLQueryListener<App_data>() {
                     @Override

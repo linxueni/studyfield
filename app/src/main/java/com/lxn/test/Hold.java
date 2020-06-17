@@ -62,7 +62,7 @@ public class Hold extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_hold);
         Bmob.initialize(this, "5b5e2b1c75af83d4316468eb9ae614c4");
-        String bql = "select * from Collect";
+        String bql = "select * from Collect ORDER BY updatedAt DESC";
         new BmobQuery<Collect>().doSQLQuery(
                 bql, new SQLQueryListener<Collect>() {
                     @Override

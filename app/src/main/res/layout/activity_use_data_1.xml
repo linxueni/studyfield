@@ -118,13 +118,13 @@ android:hint="@string/inputtag1"/>
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="10dp"
             android:background="#FFFF                                "
-            android:onClick="onClick"
+            android:onClick="onClick2"
             android:text="@string/putpicture"
             android:textColor="#2196F3"
-            android:textSize="18sp"
-            android:layout_marginLeft="100dp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button2"
